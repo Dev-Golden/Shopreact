@@ -1,0 +1,86 @@
+export const products = [
+  {
+    id: "1", name: "Classic White Sneakers", price: 89.99, category: "Footwear",
+    rating: 4.5, reviews: 128,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&q=80",
+    ],
+    description: "Premium leather sneakers with cushioned sole. Lightweight and breathable.",
+    sizes: ["38","39","40","41","42","43"], colors: ["White","Black","Grey"], inStock: true,
+  },
+  {
+    id: "2", name: "Wireless Headphones", price: 249.99, category: "Electronics",
+    rating: 4.8, reviews: 342,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&q=80",
+    ],
+    description: "40-hour battery, active noise cancellation, premium sound quality.",
+    sizes: [], colors: ["Black","Silver","Blue"], inStock: true,
+  },
+  {
+    id: "3", name: "Linen Summer Dress", price: 64.99, category: "Clothing",
+    rating: 4.3, reviews: 89,
+    image: "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80",
+    ],
+    description: "Breathable 100% linen. Relaxed fit with adjustable straps.",
+    sizes: ["XS","S","M","L","XL"], colors: ["Beige","White","Sage"], inStock: true,
+  },
+  {
+    id: "4", name: "Leather Crossbody Bag", price: 119.99, category: "Accessories",
+    rating: 4.6, reviews: 201,
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80",
+    ],
+    description: "Genuine leather with adjustable strap and multiple compartments.",
+    sizes: [], colors: ["Tan","Black","Burgundy"], inStock: true,
+  },
+  {
+    id: "5", name: "Smart Watch Series X", price: 349.99, category: "Electronics",
+    rating: 4.7, reviews: 512,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
+    ],
+    description: "Track fitness, receive notifications, monitor health 24/7.",
+    sizes: ["40mm","44mm"], colors: ["Black","Silver","Gold"], inStock: true,
+  },
+  {
+    id: "6", name: "Oversized Graphic Hoodie", price: 54.99, category: "Clothing",
+    rating: 4.2, reviews: 67,
+    image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80",
+    ],
+    description: "400gsm heavyweight cotton. Relaxed fit, pre-shrunk, fade-resistant.",
+    sizes: ["S","M","L","XL","XXL"], colors: ["Black","Stone","Forest Green"], inStock: true,
+  },
+  {
+    id: "7", name: "Minimalist Desk Lamp", price: 79.99, category: "Home",
+    rating: 4.4, reviews: 145,
+    image: "https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?w=500&q=80",
+    ],
+    description: "Touch-controlled LED, 5 brightness levels, USB charging port on base.",
+    sizes: [], colors: ["White","Black","Rose Gold"], inStock: true,
+  },
+  {
+    id: "8", name: "Running Shorts", price: 39.99, category: "Footwear",
+    rating: 4.1, reviews: 53,
+    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80",
+    ],
+    description: "Moisture-wicking fabric, built-in liner, phone pocket.",
+    sizes: ["XS","S","M","L","XL"], colors: ["Black","Navy","Red"], inStock: false,
+  },
+];
+
+export const categories = ["All","Clothing","Electronics","Footwear","Accessories","Home"];
