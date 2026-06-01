@@ -166,9 +166,7 @@ const handlePaystackSuccess = async (reference) => {
               <div className="checkout__section">
                 <h2>Payment</h2>
                 <div className="checkout__paystack-info">
-                  <div className="checkout__paystack-amount">
-                    ${totalPrice}
-                  </div>
+                <div className="checkout__paystack-amount">₦{Number(totalPrice).toLocaleString()}</div>
                   <p>You will be charged the amount above</p>
                   <p>Secured by <strong>Paystack</strong> 🔐</p>
                 </div>
@@ -213,14 +211,14 @@ const handlePaystackSuccess = async (reference) => {
                     <p>{item.name}</p>
                     <span>Qty: {item.quantity}</span>
                   </div>
-                  <p>${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>₦{(item.price * item.quantity).toLocaleString()}</p>
                 </div>
               ))}
             </div>
             <div className="checkout__summary-totals">
               <div className="checkout__summary-row">
                 <span>Subtotal</span>
-                <span>${totalPrice}</span>
+            <span>₦{Number(totalPrice).toLocaleString()}</span>
               </div>
               <div className="checkout__summary-row">
                 <span>Shipping</span>
