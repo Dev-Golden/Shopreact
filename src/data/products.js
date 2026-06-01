@@ -70,7 +70,7 @@ export const products = [
     sizes: ["XS","S","M","L","XL"], colors: ["Black","Navy","Red"], inStock: false,
   },
   {
-    id: "9", name: "Product 9", price: 45000, category: "Clothing",
+    id: "9", name: "T-Shirts", price: 45000, category: "Clothing",
     rating: 4.0, reviews: 12,
     image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&q=80"],
@@ -78,7 +78,7 @@ export const products = [
     sizes: ["S","M","L","XL"], colors: ["Black","White"], inStock: true,
   },
   {
-    id: "10", name: "Product 10", price: 32000, category: "Accessories",
+    id: "10", name: "Black-Bag", price: 32000, category: "Accessories",
     rating: 4.2, reviews: 8,
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80"],
@@ -86,7 +86,7 @@ export const products = [
     sizes: [], colors: ["Brown","Black"], inStock: true,
   },
   {
-    id: "11", name: "Product 11", price: 78000, category: "Electronics",
+    id: "11", name: "Perfume", price: 78000, category: "Clothing",
     rating: 4.5, reviews: 23,
     image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80"],
@@ -94,7 +94,7 @@ export const products = [
     sizes: [], colors: ["Black","Silver"], inStock: true,
   },
   {
-    id: "12", name: "Product 12", price: 25000, category: "Home",
+    id: "12", name: "Furniture", price: 25000, category: "Home",
     rating: 4.1, reviews: 5,
     image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80"],
@@ -102,20 +102,36 @@ export const products = [
     sizes: [], colors: ["White","Beige"], inStock: true,
   },
   {
-    id: "13", name: "Product 13", price: 15000, category: "Footwear",
+    id: "13", name: "Jordan", price: 15000, category: "Footwear",
     rating: 3.9, reviews: 7,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
-    images: ["https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"],
+    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&q=80"],
     description: "Add your product description here.",
     sizes: ["38","39","40","41","42"], colors: ["Black","White"], inStock: true,
   },
   {
-    id: "14", name: "Product 14", price: 55000, category: "Clothing",
+    id: "14", name: "Knitting", price: 55000, category: "Clothing",
     rating: 4.3, reviews: 15,
     image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80"],
     description: "Add your product description here.",
     sizes: ["XS","S","M","L","XL"], colors: ["Red","Blue","Green"], inStock: true,
+  },
+  {
+    id: "15", name: "Product 15", price: 35000, category: "Clothing",
+    rating: 4.0, reviews: 0,
+    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: ["S","M","L","XL"], colors: ["Black","White"], inStock: true,
+  },
+  {
+    id: "16", name: "Product 16", price: 42000, category: "Accessories",
+    rating: 4.0, reviews: 0,
+    image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: [], colors: ["Black","Brown"], inStock: true,
   },
 ];
 
