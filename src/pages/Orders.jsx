@@ -30,11 +30,7 @@ export default function Orders() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="orders__loading">
-        <p>Loading your orders...</p>
-      </div>
-    );
+    return <div className="orders__loading"><p>Loading your orders...</p></div>;
   }
 
   return (
@@ -56,9 +52,7 @@ export default function Orders() {
               <div key={order.id} className="order-card">
                 <div className="order-card__header">
                   <div>
-                    <p className="order-card__ref">
-                      Order #{order.reference}
-                    </p>
+                    <p className="order-card__ref">Order #{order.reference}</p>
                     <p className="order-card__date">
                       Placed on {order.createdAt?.toDate().toDateString()}
                     </p>
@@ -67,7 +61,7 @@ export default function Orders() {
                     <span className={`order-card__status order-card__status--${order.status?.toLowerCase()}`}>
                       {order.status}
                     </span>
-                    <p className="order-card__total">${order.total}</p>
+                    <p className="order-card__total">₦{Number(order.total).toLocaleString()}</p>
                   </div>
                 </div>
 
@@ -81,7 +75,7 @@ export default function Orders() {
                       <img src={item.image} alt={item.name} />
                       <div>
                         <p>{item.name}</p>
-                        <span>Qty: {item.quantity} · ${item.price}</span>
+                        <span>Qty: {item.quantity} · ₦{item.price.toLocaleString()}</span>
                       </div>
                     </div>
                   ))}

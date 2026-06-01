@@ -41,18 +41,12 @@ export default function Wishlist() {
                   <Link to={`/product/${item.id}`} className="wishlist-card__name">
                     {item.name}
                   </Link>
-                  <p className="wishlist-card__price">${item.price}</p>
+                  <p className="wishlist-card__price">₦{item.price.toLocaleString()}</p>
                   <div className="wishlist-card__actions">
-                    <button
-                      className="wishlist-card__cart-btn"
-                      onClick={() => handleAddToCart(item)}
-                    >
+                    <button className="wishlist-card__cart-btn" onClick={() => handleAddToCart(item)}>
                       Add to Cart
                     </button>
-                    <button
-                      className="wishlist-card__remove-btn"
-                      onClick={() => removeFromWishlist(item.id)}
-                    >
+                    <button className="wishlist-card__remove-btn" onClick={() => removeFromWishlist(item.id)}>
                       Remove
                     </button>
                   </div>

@@ -30,10 +30,7 @@ export default function ProductDetail() {
     : [product.image];
 
   const handleAddToCart = () => {
-    if (!user) {
-      navigate("/login");
-      return;
-    }
+    if (!user) { navigate("/login"); return; }
     addToCart({ ...product, selectedSize, selectedColor, quantity });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -42,7 +39,6 @@ export default function ProductDetail() {
   return (
     <div className="pd">
       <div className="pd__container">
-
         <div className="pd__breadcrumb">
           <Link to="/">Shop</Link>
           <span>›</span>
@@ -52,8 +48,6 @@ export default function ProductDetail() {
         </div>
 
         <div className="pd__layout">
-
-          {/* Left — Images */}
           <div className="pd__images">
             <div className="pd__main-image">
               <img src={images[selectedImage]} alt={product.name} />
@@ -61,11 +55,9 @@ export default function ProductDetail() {
             {images.length > 1 && (
               <div className="pd__thumbnails">
                 {images.map((img, i) => (
-                  <button
-                    key={i}
+                  <button key={i}
                     className={`pd__thumb ${selectedImage === i ? "pd__thumb--active" : ""}`}
-                    onClick={() => setSelectedImage(i)}
-                  >
+                    onClick={() => setSelectedImage(i)}>
                     <img src={img} alt={`view ${i + 1}`} />
                   </button>
                 ))}
@@ -73,7 +65,6 @@ export default function ProductDetail() {
             )}
           </div>
 
-          {/* Right — Info */}
           <div className="pd__info">
             <span className="pd__category">{product.category}</span>
             <h1 className="pd__name">{product.name}</h1>
@@ -92,9 +83,9 @@ export default function ProductDetail() {
             </div>
 
             <p className="pd__price">
-              ${(product.price * quantity).toFixed(2)}
+              ₦{(product.price * quantity).toLocaleString()}
               {quantity > 1 && (
-                <span className="pd__unit-price"> (${product.price} each)</span>
+                <span className="pd__unit-price"> (₦{product.price.toLocaleString()} each)</span>
               )}
             </p>
 
@@ -107,11 +98,9 @@ export default function ProductDetail() {
                 </p>
                 <div className="pd__colors">
                   {product.colors.map((color) => (
-                    <button
-                      key={color}
+                    <button key={color}
                       className={`pd__color-btn ${selectedColor === color ? "pd__color-btn--active" : ""}`}
-                      onClick={() => setSelectedColor(color)}
-                    >
+                      onClick={() => setSelectedColor(color)}>
                       {color}
                     </button>
                   ))}
@@ -126,11 +115,9 @@ export default function ProductDetail() {
                 </p>
                 <div className="pd__sizes">
                   {product.sizes.map((size) => (
-                    <button
-                      key={size}
+                    <button key={size}
                       className={`pd__size-btn ${selectedSize === size ? "pd__size-btn--active" : ""}`}
-                      onClick={() => setSelectedSize(size)}
-                    >
+                      onClick={() => setSelectedSize(size)}>
                       {size}
                     </button>
                   ))}
@@ -152,13 +139,7 @@ export default function ProductDetail() {
               onClick={handleAddToCart}
               disabled={!product.inStock}
             >
-              {!product.inStock
-                ? "Out of Stock"
-                : added
-                ? "✓ Added to Cart!"
-                : user
-                ? "Add to Cart"
-                : "Login to Add to Cart"}
+              {!product.inStock ? "Out of Stock" : added ? "✓ Added to Cart!" : user ? "Add to Cart" : "Login to Add to Cart"}
             </button>
 
             <p className={`pd__stock ${product.inStock ? "pd__stock--in" : "pd__stock--out"}`}>

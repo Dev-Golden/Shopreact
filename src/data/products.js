@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: "1", name: "Classic White Sneakers", price: 89.99, category: "Footwear",
+    id: "1", name: "Classic White Sneakers", price: 45000, category: "Footwear",
     rating: 4.5, reviews: 128,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
     images: [
@@ -11,7 +11,7 @@ export const products = [
     sizes: ["38","39","40","41","42","43"], colors: ["White","Black","Grey"], inStock: true,
   },
   {
-    id: "2", name: "Wireless Headphones", price: 249.99, category: "Electronics",
+    id: "2", name: "Wireless Headphones", price: 125000, category: "Electronics",
     rating: 4.8, reviews: 342,
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
     images: [
@@ -22,64 +22,100 @@ export const products = [
     sizes: [], colors: ["Black","Silver","Blue"], inStock: true,
   },
   {
-    id: "3", name: "Linen Summer Dress", price: 64.99, category: "Clothing",
+    id: "3", name: "Linen Summer Dress", price: 32000, category: "Clothing",
     rating: 4.3, reviews: 89,
     image: "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80"],
     description: "Breathable 100% linen. Relaxed fit with adjustable straps.",
     sizes: ["XS","S","M","L","XL"], colors: ["Beige","White","Sage"], inStock: true,
   },
   {
-    id: "4", name: "Leather Crossbody Bag", price: 119.99, category: "Accessories",
+    id: "4", name: "Leather Crossbody Bag", price: 60000, category: "Accessories",
     rating: 4.6, reviews: 201,
     image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80"],
     description: "Genuine leather with adjustable strap and multiple compartments.",
     sizes: [], colors: ["Tan","Black","Burgundy"], inStock: true,
   },
   {
-    id: "5", name: "Smart Watch Series X", price: 349.99, category: "Electronics",
+    id: "5", name: "Smart Watch Series X", price: 175000, category: "Electronics",
     rating: 4.7, reviews: 512,
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"],
     description: "Track fitness, receive notifications, monitor health 24/7.",
     sizes: ["40mm","44mm"], colors: ["Black","Silver","Gold"], inStock: true,
   },
   {
-    id: "6", name: "Oversized Graphic Hoodie", price: 54.99, category: "Clothing",
+    id: "6", name: "Oversized Graphic Hoodie", price: 27000, category: "Clothing",
     rating: 4.2, reviews: 67,
     image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&q=80"],
     description: "400gsm heavyweight cotton. Relaxed fit, pre-shrunk, fade-resistant.",
     sizes: ["S","M","L","XL","XXL"], colors: ["Black","Stone","Forest Green"], inStock: true,
   },
   {
-    id: "7", name: "Minimalist Desk Lamp", price: 79.99, category: "Home",
+    id: "7", name: "Minimalist Desk Lamp", price: 40000, category: "Home",
     rating: 4.4, reviews: 145,
     image: "https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1534073737927-85f1ebff1f5d?w=500&q=80"],
     description: "Touch-controlled LED, 5 brightness levels, USB charging port on base.",
     sizes: [], colors: ["White","Black","Rose Gold"], inStock: true,
   },
   {
-    id: "8", name: "Running Shorts", price: 39.99, category: "Footwear",
+    id: "8", name: "Running Shorts", price: 20000, category: "Footwear",
     rating: 4.1, reviews: 53,
     image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80",
-    ],
+    images: ["https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80"],
     description: "Moisture-wicking fabric, built-in liner, phone pocket.",
     sizes: ["XS","S","M","L","XL"], colors: ["Black","Navy","Red"], inStock: false,
+  },
+  {
+    id: "9", name: "Product 9", price: 45000, category: "Clothing",
+    rating: 4.0, reviews: 12,
+    image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: ["S","M","L","XL"], colors: ["Black","White"], inStock: true,
+  },
+  {
+    id: "10", name: "Product 10", price: 32000, category: "Accessories",
+    rating: 4.2, reviews: 8,
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: [], colors: ["Brown","Black"], inStock: true,
+  },
+  {
+    id: "11", name: "Product 11", price: 78000, category: "Electronics",
+    rating: 4.5, reviews: 23,
+    image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: [], colors: ["Black","Silver"], inStock: true,
+  },
+  {
+    id: "12", name: "Product 12", price: 25000, category: "Home",
+    rating: 4.1, reviews: 5,
+    image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: [], colors: ["White","Beige"], inStock: true,
+  },
+  {
+    id: "13", name: "Product 13", price: 15000, category: "Footwear",
+    rating: 3.9, reviews: 7,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: ["38","39","40","41","42"], colors: ["Black","White"], inStock: true,
+  },
+  {
+    id: "14", name: "Product 14", price: 55000, category: "Clothing",
+    rating: 4.3, reviews: 15,
+    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80",
+    images: ["https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80"],
+    description: "Add your product description here.",
+    sizes: ["XS","S","M","L","XL"], colors: ["Red","Blue","Green"], inStock: true,
   },
 ];
 

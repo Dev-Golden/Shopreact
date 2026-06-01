@@ -72,12 +72,11 @@ export default function ProductCard({ product }) {
             </svg>
           </button>
         </Link>
-
         <div className="product-card__body">
           <Link to={`/product/${product.id}`} className="product-card__name">{product.name}</Link>
           <Stars rating={product.rating} />
           <div className="product-card__footer">
-            <span className="product-card__price">${product.price}</span>
+            <span className="product-card__price">₦{product.price.toLocaleString()}</span>
             <button
               className="product-card__add-btn"
               onClick={handleAddToCart}

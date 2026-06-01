@@ -13,10 +13,7 @@ export default function CartDrawer({ open, onClose }) {
 
   return (
     <>
-      <div
-        className={`cart-overlay ${open ? "cart-overlay--visible" : ""}`}
-        onClick={onClose}
-      />
+      <div className={`cart-overlay ${open ? "cart-overlay--visible" : ""}`} onClick={onClose} />
       <div className={`cart-drawer ${open ? "cart-drawer--open" : ""}`}>
         <div className="cart-drawer__header">
           <h2>Your Cart ({cart.length})</h2>
@@ -31,20 +28,14 @@ export default function CartDrawer({ open, onClose }) {
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
             <p>Your cart is empty</p>
-            <button className="cart-drawer__continue" onClick={onClose}>
-              Continue Shopping
-            </button>
+            <button className="cart-drawer__continue" onClick={onClose}>Continue Shopping</button>
           </div>
         ) : (
           <>
             <div className="cart-drawer__items">
               {cart.map((item) => (
                 <div key={item.id} className="cart-item">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="cart-item__image"
-                  />
+                  <img src={item.image} alt={item.name} className="cart-item__image" />
                   <div className="cart-item__info">
                     <p className="cart-item__name">{item.name}</p>
                     {(item.selectedSize || item.selectedColor) && (
@@ -55,53 +46,36 @@ export default function CartDrawer({ open, onClose }) {
                       </p>
                     )}
                     <p className="cart-item__price">
-                      ${(item.price * (item.quantity || 1)).toFixed(2)}
+                      ₦{(item.price * (item.quantity || 1)).toLocaleString()}
                       {(item.quantity || 1) > 1 && (
                         <span className="cart-item__unit">
-                          (${item.price} x {item.quantity})
+                          (₦{item.price.toLocaleString()} x {item.quantity})
                         </span>
                       )}
                     </p>
                     <div className="cart-item__qty">
-                      <button
-                        onClick={() =>
-                          item.quantity === 1
-                            ? removeFromCart(item.id)
-                            : updateQuantity(item.id, item.quantity - 1)
-                        }
-                      >
-                        −
-                      </button>
+                      <button onClick={() =>
+                        item.quantity === 1
+                          ? removeFromCart(item.id)
+                          : updateQuantity(item.id, item.quantity - 1)
+                      }>−</button>
                       <span>{item.quantity || 1}</span>
-                      <button onClick={() => updateQuantity(item.id, (item.quantity || 1) + 1)}>
-                        +
-                      </button>
+                      <button onClick={() => updateQuantity(item.id, (item.quantity || 1) + 1)}>+</button>
                     </div>
                   </div>
-                  <button
-                    className="cart-item__remove"
-                    onClick={() => removeFromCart(item.id)}
-                  >
-                    ✕
-                  </button>
+                  <button className="cart-item__remove" onClick={() => removeFromCart(item.id)}>✕</button>
                 </div>
               ))}
             </div>
-
             <div className="cart-drawer__footer">
               <div className="cart-drawer__total">
                 <span>Total</span>
-                <span>${totalPrice}</span>
+                <span>₦{Number(totalPrice).toLocaleString()}</span>
               </div>
-              <button
-                className="cart-drawer__checkout"
-                onClick={handleCheckout}
-              >
+              <button className="cart-drawer__checkout" onClick={handleCheckout}>
                 Proceed to Checkout →
               </button>
-              <button className="cart-drawer__clear" onClick={clearCart}>
-                Clear Cart
-              </button>
+              <button className="cart-drawer__clear" onClick={clearCart}>Clear Cart</button>
             </div>
           </>
         )}
