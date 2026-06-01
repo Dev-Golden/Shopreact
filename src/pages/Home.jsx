@@ -25,18 +25,20 @@ export default function Home() {
     }
     if (search.trim()) {
       result = result.filter((p) =>
-        p.name.toLowerCase().includes(search.toLowerCase())
+        p.name.toLowerCase().includes(search.toLowerCase()),
       );
     }
-    if (sort === "price-asc") result = [...result].sort((a, b) => a.price - b.price);
-    if (sort === "price-desc") result = [...result].sort((a, b) => b.price - a.price);
-    if (sort === "rating") result = [...result].sort((a, b) => b.rating - a.rating);
+    if (sort === "price-asc")
+      result = [...result].sort((a, b) => a.price - b.price);
+    if (sort === "price-desc")
+      result = [...result].sort((a, b) => b.price - a.price);
+    if (sort === "rating")
+      result = [...result].sort((a, b) => b.rating - a.rating);
     return result;
   }, [activeCategory, search, sort]);
 
   return (
     <main className="home">
-
       {toast && (
         <Toast
           message={toast.message}
@@ -47,11 +49,15 @@ export default function Home() {
 
       <section className="home__hero">
         <div className="home__hero-text">
-          <h1>New Arrivals <span>2024</span></h1>
-          <p>Discover premium products — from fashion to tech.</p>
+          <h1>
+            New Arrivals <span>2026</span>
+          </h1>
+          <p>Discover premium products — from ShopReact.</p>
           <button
             onClick={() =>
-              document.getElementById("products").scrollIntoView({ behavior: "smooth" })
+              document
+                .getElementById("products")
+                .scrollIntoView({ behavior: "smooth" })
             }
           >
             Shop Now →
@@ -61,8 +67,16 @@ export default function Home() {
 
       <section className="home__controls" id="products">
         <div className="home__search-wrap">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#999"
+            strokeWidth="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <input
             type="text"
@@ -72,7 +86,12 @@ export default function Home() {
             className="home__search"
           />
           {search && (
-            <button className="home__search-clear" onClick={() => setSearch("")}>✕</button>
+            <button
+              className="home__search-clear"
+              onClick={() => setSearch("")}
+            >
+              ✕
+            </button>
           )}
         </div>
 
@@ -84,7 +103,7 @@ export default function Home() {
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
-            </button>
+            </button> 
           ))}
         </div>
 
@@ -114,11 +133,24 @@ export default function Home() {
         </section>
       ) : filtered.length === 0 ? (
         <div className="home__empty">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ddd" strokeWidth="1.5">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <svg
+            width="64"
+            height="64"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ddd"
+            strokeWidth="1.5"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <p>No products match your search.</p>
-          <button onClick={() => { setSearch(""); setActiveCategory("All"); }}>
+          <button
+            onClick={() => {
+              setSearch("");
+              setActiveCategory("All");
+            }}
+          >
             Clear filters
           </button>
         </div>
@@ -129,7 +161,6 @@ export default function Home() {
           ))}
         </section>
       )}
-
     </main>
   );
 }
