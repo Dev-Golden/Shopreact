@@ -118,7 +118,7 @@ export const products = [
     sizes: ["XS","S","M","L","XL"], colors: ["Red","Blue","Green"], inStock: true,
   },
   {
-    id: "15", name: "Product 15", price: 35000, category: "Clothing",
+    id: "15", name: "Hanger", price: 35000, category: "Clothing",
     rating: 4.0, reviews: 0,
     image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80"],
@@ -126,7 +126,7 @@ export const products = [
     sizes: ["S","M","L","XL"], colors: ["Black","White"], inStock: true,
   },
   {
-    id: "16", name: "Product 16", price: 42000, category: "Accessories",
+    id: "16", name: "Splash", price: 42000, category: "Accessories",
     rating: 4.0, reviews: 0,
     image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80",
     images: ["https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80"],
