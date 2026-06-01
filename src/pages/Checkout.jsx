@@ -26,24 +26,25 @@ export default function Checkout() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-const handlePaystackSuccess = async (reference) => {
-  const user = auth.currentUser;
-  if (user) {
-    await addDoc(collection(db, "orders", user.uid, "myorders"), {
-      reference: reference.reference,
-      items: cart,
-      total: totalPrice,
-      shipping: form,
-      status: "Processing",
-      estimatedDelivery: new Date(
-        Date.now() + 5 * 24 * 60 * 60 * 1000
-      ).toDateString(),
-      createdAt: serverTimestamp(),
-    });
-  }
-  clearCart();
-  navigate("/order-success");
-};
+  const handlePaystackSuccess = async (reference) => {
+    const user = auth.currentUser;
+    if (user) {
+      await addDoc(collection(db, "orders", user.uid, "myorders"), {
+        reference: reference.reference,
+        items: cart,
+        total: totalPrice,
+        shipping: form,
+        status: "Processing",
+        estimatedDelivery: new Date(
+          Date.now() + 5 * 24 * 60 * 60 * 1000
+        ).toDateString(),
+        createdAt: serverTimestamp(),
+      });
+    }
+    clearCart();
+    navigate("/order-success");
+  };
+
   const handlePaystackClose = () => {
     alert("Payment cancelled. Your order has not been placed.");
   };
@@ -166,7 +167,9 @@ const handlePaystackSuccess = async (reference) => {
               <div className="checkout__section">
                 <h2>Payment</h2>
                 <div className="checkout__paystack-info">
-                <div className="checkout__paystack-amount">₦{Number(totalPrice).toLocaleString()}</div>
+                  <div className="checkout__paystack-amount">
+                    ₦{Number(totalPrice).toLocaleString()}
+                  </div>
                   <p>You will be charged the amount above</p>
                   <p>Secured by <strong>Paystack</strong> 🔐</p>
                 </div>
@@ -218,7 +221,7 @@ const handlePaystackSuccess = async (reference) => {
             <div className="checkout__summary-totals">
               <div className="checkout__summary-row">
                 <span>Subtotal</span>
-            <span>₦{Number(totalPrice).toLocaleString()}</span>
+                <span>₦{Number(totalPrice).toLocaleString()}</span>
               </div>
               <div className="checkout__summary-row">
                 <span>Shipping</span>
@@ -226,7 +229,7 @@ const handlePaystackSuccess = async (reference) => {
               </div>
               <div className="checkout__summary-row checkout__summary-total">
                 <span>Total</span>
-                <span>${totalPrice}</span>
+                <span>₦{Number(totalPrice).toLocaleString()}</span>
               </div>
             </div>
           </div>
